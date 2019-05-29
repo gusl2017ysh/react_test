@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,9 +18,31 @@ function App() {
         >
           Learn React
         </a>
+
       </header>
     </div>
   );
+}
+
+class App2 extends Component {
+  render() {
+    return (
+      <div className="App">
+      
+      </div>
+    );
+  }
+}
+
+
+class App3 extends Component {
+  render() {
+    return (
+      <div className="App">
+      
+      </div>
+    );
+  }
 }
 
 export default App;
