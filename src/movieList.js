@@ -18,10 +18,34 @@ function Moive_list() {
             </ul>
         </div>
 
+        {/* card list */}
+        <div className="card-list">
+            <table>
+                <tr>
+                    <Card_td />
+                </tr>
+            </table>
+        </div>
+
       </header>
     </div>
   );
-}
+};
+
+class Card_td extends Component {
+    render() {
+        if (1 > 2) {
+            return (
+                <td>test_td_true</td>
+            );
+        } else {
+            return (
+                <td>test_td_false</td>
+            );
+        }
+    }
+};
+
 
 function Movie_card() {
     return (
@@ -29,13 +53,13 @@ function Movie_card() {
 
         </div>
     );
-}
+};
 
 function Movie_cover() {
     return (
         <div className="movie-cover"></div>
     );
-}
+};
 
 // classでcomponent作成
 class movie_card_c extends Component {
@@ -46,7 +70,7 @@ class movie_card_c extends Component {
             </div>
         );
     }
-}
+};
 
 
 export default Moive_list;
