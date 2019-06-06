@@ -21,9 +21,11 @@ function Moive_list() {
         {/* card list */}
         <div className="card-list">
             <table>
-                <tr>
-                    <Card_td />
-                </tr>
+                <tbody>
+                    <tr>
+                        <Card_td />
+                    </tr>
+                </tbody>
             </table>
         </div>
 
