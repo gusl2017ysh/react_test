@@ -23,7 +23,22 @@ const movies = [
 ];
 
 class App extends Component {
+  
+  // render life cycle => [componentWillMount, render, componentDidMount]
+  // update life cycle => [componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, render, componentDidUpdate] 
+
+  // ----------------------------------------------------------
+  // render cycle.↓
+
+
+  // render life cycle 1.
+  componentWillMount() {
+    console.log('w')
+  }
+
+  // render life cycle 2.
   render() {
+    console.log('r')
     return (
       <div className="App">
 
@@ -36,8 +51,44 @@ class App extends Component {
       </div>
     );
   }
+
+  // render life cycle 3.
+  componentDidMount() {
+    console.log('d')
+  }
+
+  // ----------------------------------------------------------
+  // update cycle.↓
+
+
+  // update life cycle 1.
+  componentWillReceiveProps() {
+    console.log('cwrp')
+  }
+
+  // update life cycle 2.
+  shouldComponentUpdate() {
+    // when props has changed, this will return true
+    console.log('scu')
+  }
+
+  // update life cycle 3.
+  componentWillUpdate() {
+    // when shouldComponentUpdate() has returned true, this cycle will happen
+    console.log('cwu')
+    // i may use loading phrase, icon, something like those here.
+  }
+
+  // update life cycle 4.
+  // render () {} -> when componentWillUpdate() after done, 
+
+  // update life cycle 5.
+  componentDidUpdate() {
+    // when props has changed
+    console.log('cdu')
+  }
+
+
 }
-
-
 
 export default App;
