@@ -4,17 +4,11 @@ import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 
-import App, { App2, App3 } from './App';
-import Moive_list from './movieList';
-import Movie from './Movie';
-
+import App from './App';
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<Moive_list />, document.getElementById('main'));
-
-ReactDOM.render(<Movie />, document.getElementById('Movie'));
 
 
 // If you want your app to work offline and load faster, you can change
