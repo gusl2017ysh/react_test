@@ -48,7 +48,7 @@ class App extends Component {
         <Movie title={movieTitles[2]} poster={movieImages[2]}/>
 
         {/* smarter way */}
-        {movies.map(movie , index => {
+        {movies.map((movie , index) => {
           // key has to be unique.
           return <Movie title={movie.title} poster={movie.poster} key={index}/>
         })}
