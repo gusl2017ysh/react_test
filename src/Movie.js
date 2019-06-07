@@ -4,7 +4,7 @@ import './Movie.css';
 
 
 class Movie extends Component {
-    // 入力チェック
+    // check type
     static propTypes = {
         title: PropTypes.string.isRequired,
         poster: PropTypes.string.isRequired,
