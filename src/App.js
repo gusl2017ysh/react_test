@@ -11,7 +11,7 @@ class App extends Component {
 
 
   // 2. state
-  // state. is An Object in each of Components of react
+  // state. is An Object in each of Components of react <but There is also stateless component>
   // when this state has changed, everytime, will call render() <include whole update cycle>
   state = {
     // greeting: 'hello',
