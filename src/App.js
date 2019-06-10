@@ -94,6 +94,36 @@ class App extends Component {
     }, 1000);
     // # this could be use to change list view of display when i scoll the page. like sns
 
+    // change state 3.
+    const callApiFromFetch = fetch('https://yts.lt/api/v2/list_movies.json')
+    .then(res => {
+      console.log(res); // res === promise
+      return res.json();
+    })
+    .then(json => {
+      console.log(json); // res === json
+
+      // modifying json for what i want. or i could modifying my hogan
+      const Movies = json.data.movies.map(movie => {
+          return {
+            title: movie.title,
+            poster: movie.medium_cover_image
+          }
+        }
+      )
+      this.setState({
+        movies: Movies
+      })
+
+      return json;
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
+
+
+
 
   }
 
