@@ -126,7 +126,7 @@ class App extends Component {
     })
     .then(json => {
       // console.log(json); // res === json
-      
+
       // modifying json for what i want. or i could modifying my hogan
       const Movies = json.data.movies.map(movie => {
           return {
@@ -205,7 +205,7 @@ class App extends Component {
   _renderMovies = () => {
     const movies =
     this.state.movies.map((movie , index) => {
-      // # by the way, usign < index ↑ > as a key here, is not fast. using another one is better. like movie.id
+      // # by the way, using < index ↑ > as a key here, is not fast. using another one is better. like movie.id
 
       const _poster = 
       movie.medium_cover_image ? 
