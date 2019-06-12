@@ -48,4 +48,37 @@ DumbMoviePoster.propTypes = {
 }
 // # this is how to check type of props in dumb component
 
+
+
+// export function PagingMovies({page, e}) {
+//     return <button className="pageBtn" onClick={e}>{page}</button>
+// }
+// PagingMovies.propTypes ={
+//     page: PropTypes.number.isRequired
+// }
+
+export class PagingMovies extends Component {
+    static propTypes = {
+        page: PropTypes.number.isRequired
+    }
+    constructor(props) {
+        super(props);
+        // this.handleClick = this.handleClick.bind(this);
+
+        // getting event from parent component
+        this._handleClick = this.props.pagingEvent.bind(this, this.props.page); // handle parameter
+    }
+    // handleClick() {
+    //     debugger
+    //     console.log('click!!!');
+    // }
+    render() {
+        return <button className="pageBtn" onClick={this._handleClick}>
+               {String(this.props.page) === this.props.currentPage ? <h1>{this.props.page}</h1> : this.props.page}
+               </button>
+    }
+}
+
+
+
 export default Movie;
